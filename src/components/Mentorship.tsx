@@ -21,7 +21,7 @@ export default function Mentorship() {
   const duplicatedRow2 = [...galleryItemsRow2, ...galleryItemsRow2];
 
   return (
-    <section id="mentoria" className="py-24 bg-surface-low overflow-hidden">
+    <section id="mentoria" className="py-24 bg-surface overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 mb-16">
         <div className="text-center max-w-3xl mx-auto">
           <motion.span

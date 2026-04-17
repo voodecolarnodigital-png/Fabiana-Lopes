@@ -2,13 +2,13 @@ import { motion } from "motion/react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100dvh] flex flex-col justify-center pt-36 md:pt-32 pb-0 overflow-hidden bg-surface">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full flex-1 flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 lg:items-center">
+    <section className="relative min-h-[100dvh] flex flex-col justify-between pt-36 md:pt-32 pb-0 overflow-hidden bg-surface">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full flex-1 flex flex-col lg:flex-row gap-8 lg:gap-16">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="z-10 flex-none"
+          className="z-10 flex-1 flex flex-col justify-center pb-8 lg:pb-32"
         >
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] mb-8 -tracking-widest bg-gradient-to-r from-[#3d2014] via-[#c9834c] to-[#3d2014] bg-clip-text text-transparent">
             A transformação<br className="hidden sm:block" /> que você merece
