@@ -24,7 +24,7 @@ export default function Home() {
         hasStartedTimer = true;
         timer = setTimeout(() => {
           setShowBanner(true);
-        }, 5000);
+        }, 7000);
       }
     };
 
@@ -64,10 +64,10 @@ export default function Home() {
             {/* Chat Bubble */}
             <div className="bg-[#FFFFFF30] backdrop-blur-[15px] rounded-2xl rounded-br-sm py-3 px-5 shadow-2xl border border-[#D4AF37]/40 text-right">
               <p className="text-[10px] md:text-xs text-primary font-bold uppercase tracking-widest mb-1">
-                Agenda 90% Lotada
+                Vagas limitadas
               </p>
               <p className="text-sm md:text-base font-bold text-on-surface">
-                Reservar vaga
+                Reservar agora
               </p>
             </div>
             
