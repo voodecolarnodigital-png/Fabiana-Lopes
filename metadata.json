@@ -1,0 +1,7 @@
+{
+  "name": "Remix: Fabiana Lopes - Spa Brow \u0026 Face",
+  "description": "Clínica de estética avançada e bem-estar de luxo com protocolos exclusivos.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

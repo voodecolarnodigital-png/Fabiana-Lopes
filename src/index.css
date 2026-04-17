@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Cormorant Garamond", serif;
+  --font-juana: "Juana", serif;
+  --font-sans: "Overpass", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
+
+  --color-primary: #361f1a;
+  --color-primary-dim: #4e342e;
+  --color-secondary: #775a19;
+  --color-background: #f9f9f8;
+  --color-surface: #f9f9f8;
+  --color-surface-low: #f4f4f3;
+  --color-surface-high: #e8e8e7;
+  --color-on-surface: #1a1c1c;
+  --color-on-surface-variant: #504442;
+  --color-outline-variant: #d4c3bf;
+  --color-about-bg: #e6dad2;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+@layer utilities {
+  .glass-nav {
+    @apply bg-white/80 backdrop-blur-xl border-b border-outline-variant/10;
+  }
+
+  .asymmetric-card {
+    border-radius: 1.5rem 1.5rem 1.5rem 0px;
+  }
+
+  .asymmetric-card-rev {
+    border-radius: 1.5rem 1.5rem 0px 1.5rem;
+  }
+
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes scroll-right {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+
+  .animate-scroll-left {
+    animation: scroll-left 52s linear infinite;
+  }
+
+  .animate-scroll-right {
+    animation: scroll-right 52s linear infinite;
+  }
+
+  .animate-scroll-left-slow {
+    animation: scroll-left 104s linear infinite;
+  }
+
+  .animate-scroll-right-slow {
+    animation: scroll-right 104s linear infinite;
+  }
+
+  .pause-animation {
+    animation-play-state: paused !important;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Overpass:wght@300;400;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');

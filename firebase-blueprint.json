@@ -1,0 +1,59 @@
+{
+  "entities": {
+    "Service": {
+      "title": "Service",
+      "description": "A beauty service offered by the clinic",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "description": "Name of the service" },
+        "description": { "type": "string", "description": "Detailed description of the service" },
+        "image": { "type": "string", "description": "URL or path to the service image" },
+        "tags": { 
+          "type": "array", 
+          "items": { "type": "string" },
+          "description": "List of tags/highlights for the service" 
+        },
+        "order": { "type": "number", "description": "Display order" }
+      },
+      "required": ["title", "description", "image", "order"]
+    },
+    "Testimonial": {
+      "title": "Testimonial",
+      "description": "A video testimonial from a client",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "Client's name" },
+        "image": { "type": "string", "description": "Thumbnail image for the testimonial" },
+        "videoUrl": { "type": "string", "description": "YouTube embed URL" },
+        "active": { "type": "boolean", "description": "Whether the testimonial is visible" },
+        "order": { "type": "number", "description": "Display order" }
+      },
+      "required": ["name", "image", "videoUrl", "active", "order"]
+    },
+    "User": {
+      "title": "User",
+      "description": "System user with role-based access",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string", "format": "email" },
+        "role": { "type": "string", "enum": ["admin", "client"] },
+        "displayName": { "type": "string" }
+      },
+      "required": ["email", "role"]
+    }
+  },
+  "firestore": {
+    "/services/{serviceId}": {
+      "schema": "Service",
+      "description": "Collection of beauty services"
+    },
+    "/testimonials/{testimonialId}": {
+      "schema": "Testimonial",
+      "description": "Collection of client video testimonials"
+    },
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Storage for user profiles and roles"
+    }
+  }
+}

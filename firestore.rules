@@ -1,0 +1,107 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: services
+    // Document ID: auto-generated or manual string
+    // Fields:
+    //   - title: string (required) - Service name
+    //   - description: string (required) - Service details
+    //   - image: string (required) - Image URL
+    //   - tags: list (optional) - Array of strings
+    //   - order: number (required) - Sort order
+    //
+    // Collection: testimonials
+    // Document ID: auto-generated
+    // Fields:
+    //   - name: string (required) - Client name
+    //   - image: string (required) - Thumbnail URL
+    //   - videoUrl: string (required) - Embed URL
+    //   - active: bool (required) - Visibility toggle
+    //   - order: number (required) - Sort order
+    //
+    // Collection: users
+    // Document ID: userId (Auth UID)
+    // Fields:
+    //   - email: string (required) - User email
+    //   - role: string (required, 'admin' or 'client') - Access level
+    //   - displayName: string (optional)
+    //
+    // ===============================================================
+
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+    
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && 
+        (get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin' || 
+         (request.auth.token.email == "AdrianoSamadhi@gmail.com" && request.auth.token.email_verified == true));
+    }
+    
+    function isValidService(data) {
+      return data.keys().hasAll(['title', 'description', 'image', 'order']) &&
+             data.title is string && data.title.size() > 0 && data.title.size() <= 100 &&
+             data.description is string && data.description.size() > 0 && data.description.size() <= 2000 &&
+             data.image is string && data.image.size() > 0 && data.image.size() <= 1000 &&
+             data.order is number;
+    }
+    
+    function isValidTestimonial(data) {
+      return data.keys().hasAll(['name', 'image', 'videoUrl', 'active', 'order']) &&
+             data.name is string && data.name.size() > 0 && data.name.size() <= 100 &&
+             data.image is string && data.image.size() > 0 && data.image.size() <= 1000 &&
+             data.videoUrl is string && data.videoUrl.size() > 0 && data.videoUrl.size() <= 1000 &&
+             data.active is bool &&
+             data.order is number;
+    }
+
+    function isValidUser(data) {
+      return data.keys().hasAll(['email', 'role']) &&
+             data.email is string && data.email.size() <= 200 &&
+             data.role in ['admin', 'client'] &&
+             (!('displayName' in data) || (data.displayName is string && data.displayName.size() <= 200));
+    }
+
+    // ===============================================================
+    // Collection Rules
+    // ===============================================================
+
+    match /services/{serviceId} {
+      allow read: if true;
+      allow create: if isAdmin() && isValidService(request.resource.data);
+      allow update: if isAdmin() && isValidService(request.resource.data);
+      allow delete: if isAdmin();
+    }
+    
+    match /testimonials/{testimonialId} {
+      allow read: if true;
+      allow create: if isAdmin() && isValidTestimonial(request.resource.data);
+      allow update: if isAdmin() && isValidTestimonial(request.resource.data);
+      allow delete: if isAdmin();
+    }
+    
+    match /users/{userId} {
+      allow read: if isOwner(userId) || isAdmin();
+      allow create: if isAuthenticated() && isOwner(userId) && isValidUser(request.resource.data) && (request.resource.data.role == 'client' || isAdmin());
+      allow update: if isAuthenticated() && isOwner(userId) && isValidUser(request.resource.data) && (request.resource.data.role == resource.data.role || isAdmin());
+    }
+    
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
