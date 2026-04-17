@@ -1,19 +1,28 @@
 import { motion } from "motion/react";
-import { Menu, X, Calendar } from "lucide-react";
 import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Serviços", href: "#servicos" },
-    { name: "Depoimentos", href: "#depoimentos" },
-    { name: "Sobre", href: "#sobre" },
-    { name: "Mentoria", href: "#mentoria" },
-    { name: "Contato", href: "#contato" },
-    { name: "FAQ", href: "#faq" },
-    { name: "Cursos", href: "#cursos" },
+    { name: "Serviços", id: "servicos" },
+    { name: "Depoimentos", id: "depoimentos" },
+    { name: "Sobre", id: "sobre" },
+    { name: "Mentoria", id: "mentoria" },
+    { name: "Contato", id: "contato" },
+    { name: "FAQ", id: "faq" },
+    { name: "Cursos", id: "cursos" },
   ];
+
+  const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsOpen(false);
+  };
 
   return (
     <nav className="fixed top-0 w-full z-50 glass-nav">
@@ -32,26 +41,25 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <a
               key={link.name}
-              href={link.href}
+              href={`#${link.id}`}
+              onClick={(e) => handleScrollTo(e, link.id)}
               className="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium tracking-wide"
             >
               {link.name}
             </a>
           ))}
-          <a 
-            href="https://wa.me/5511999000658?text=Ol%C3%A1!%20Vi%20seu%20an%C3%BAncio%20no%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Fabiana."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-primary text-white px-8 py-3 rounded-full text-sm font-semibold hover:scale-105 transition-transform shadow-lg flex items-center gap-2"
-          >
-            <Calendar size={16} />
+          <a href="#contato" onClick={(e) => handleScrollTo(e, "contato")} className="btn-primary flex items-center gap-2 text-sm ml-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
             Agendar Avaliação
           </a>
         </div>
 
-        {/* Mobile Toggle */}
-        <button className="md:hidden text-primary" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X /> : <Menu />}
+        {/* Mobile menu button */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden text-primary p-2"
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
@@ -60,24 +68,19 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-white border-b border-outline-variant/10 p-6 flex flex-col gap-4"
+          className="md:hidden bg-white border-b border-outline-variant/10 p-6 flex flex-col gap-4 shadow-xl absolute top-full left-0 w-full"
         >
           {navLinks.map((link) => (
             <a
               key={link.name}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="text-on-surface-variant text-lg font-medium"
+              href={`#${link.id}`}
+              onClick={(e) => handleScrollTo(e, link.id)}
+              className="text-on-surface-variant text-lg font-medium border-b border-outline-variant/10 pb-2"
             >
               {link.name}
             </a>
           ))}
-          <a 
-            href="https://wa.me/5511999000658?text=Ol%C3%A1!%20Vi%20seu%20an%C3%BAncio%20no%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Fabiana."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-primary text-white px-8 py-4 rounded-full text-base font-semibold text-center"
-          >
+          <a href="#contato" onClick={(e) => handleScrollTo(e, "contato")} className="btn-primary text-center mt-2 justify-center py-4">
             Agendar Avaliação
           </a>
         </motion.div>
