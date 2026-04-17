@@ -75,7 +75,7 @@ export default function Hero() {
           {/* Cutout Image with Drop Shadow */}
           <img
             className="relative z-20 w-full max-w-[450px] lg:max-w-[550px] object-contain object-bottom drop-shadow-[0_20px_40px_rgba(61,32,20,0.5)]"
-            src="/fabi-principal.png?v=1"
+            src="./fabi-principal.png?v=1"
             alt="Fabiana Lopes"
             referrerPolicy="no-referrer"
           />

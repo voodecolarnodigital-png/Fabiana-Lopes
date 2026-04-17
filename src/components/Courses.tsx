@@ -6,49 +6,49 @@ const courses = [
   {
     title: "Correção de Cor",
     description: "Técnicas avançadas de colorimetria para correção e neutralização segura de cores indesejadas.",
-    image: "/Corre%C3%A7%C3%A3o%20de%20Cor.png",
+    image: "./correcao-de-cor.png",
     link: "https://pay.kiwify.com.br/sG3aoFP",
     tags: ["Colorimetria", "Correção"]
   },
   {
     title: "O Segredo da Ombrè",
     description: "Descubra todos os segredos para criar o efeito Ombrè perfeito, com transições suaves e design impecável.",
-    image: "/O%20Segredo%20da%20Ombre.png",
+    image: "./o-segredo-da-ombre.png",
     link: "https://pay.kiwify.com.br/TKS05Xa",
     tags: ["Sobrancelhas", "Ombrè"]
   },
   {
     title: "O PORTAL - método SOS Correção",
     description: "Acesso completo ao método SOS Correção. Torne-se referência resolvendo os casos mais complexos do mercado.",
-    image: "/O%20PORTAL%20-%20m%C3%A9todo%20SOS%20Corre%C3%A7%C3%A3o.png",
+    image: "./o-portal-metodo-sos-correcao.png",
     link: "https://pay.kiwify.com.br/2fNtJuM",
     tags: ["SOS", "Avançado"]
   },
   {
     title: "Camuflagem Ilusionism HD",
     description: "Aprenda a técnica de camuflagem com alta definição para entregar resultados imperceptíveis e restaurar a autoestima.",
-    image: "/Camuflagem%20Ilusionism%20HD.png",
+    image: "./camuflagem-ilusionism-hd.png",
     link: "https://pay.kiwify.com.br/l2JHBVo",
     tags: ["Camuflagem", "Estética"]
   },
   {
     title: "Imersão Shadow 3RS",
     description: "Domine a técnica Shadow 3RS para sobrancelhas perfeitas e resultados incrivelmente naturais.",
-    image: "/Imers%C3%A3o%20Shadow%203RS.png",
+    image: "./imersao-shadow-3rs.png",
     link: "https://pay.kiwify.com.br/DuoIDeT",
     tags: ["Sobrancelhas", "Shadow"]
   },
   {
     title: "IMERSÃO IVP",
     description: "Imersão completa no método IVP para transformar seus resultados e elevar o nível dos seus atendimentos.",
-    image: "/IMERS%C3%83O%20IVP.png",
+    image: "./imersao-ivp.png",
     link: "https://pay.kiwify.com.br/z0ACbUf",
     tags: ["Imersão", "Método IVP"]
   },
   {
     title: "Projeto 100% - Agenda Cheia",
     description: "Estratégias validadas de marketing, posicionamento e captação para lotar sua agenda de clientes todos os meses.",
-    image: "/Projeto%20100%25%20-%20Agenda%20Cheia.png",
+    image: "./projeto-100-agenda-cheia.png",
     link: "https://pay.kiwify.com.br/yTZtGUO",
     tags: ["Negócios", "Marketing"]
   }

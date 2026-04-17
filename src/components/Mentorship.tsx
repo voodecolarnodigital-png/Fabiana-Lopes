@@ -1,19 +1,19 @@
 import { motion } from "motion/react";
 
 const galleryItemsRow1 = [
-  "/mentora%20png1.png?t=3",
-  "/mentora%20gif%201.gif?t=3",
-  "/mentora%20png%202.png?t=3",
-  "/mentora%202.gif?t=3",
-  "/mentora%20png%203.png?t=3",
+  "./mentora-png1.png?t=3",
+  "./mentora-gif-1.gif?t=3",
+  "./mentora-png-2.png?t=3",
+  "./mentora-2.gif?t=3",
+  "./mentora-png-3.png?t=3",
 ];
 
 const galleryItemsRow2 = [
-  "/cur%20png1.png?t=3",
-  "/cur%20png2.png?t=3",
-  "/cur%20png4.png?t=3",
-  "/cur%20png5.png?t=3",
-  "/cur%20png6.png?t=3",
+  "./cur-png1.png?t=3",
+  "./cur-png2.png?t=3",
+  "./cur-png4.png?t=3",
+  "./cur-png5.png?t=3",
+  "./cur-png6.png?t=3",
 ];
 
 export default function Mentorship() {

@@ -8,21 +8,21 @@ const defaultVideoTestimonials = [
   {
     id: "default-1",
     name: "Cliente Satisfeita",
-    image: "/capa-depoimento-1.png",
+    image: "./capa-depoimento-1.png",
     videoUrl: "https://www.youtube.com/embed/3n64vExptwk?autoplay=1&playsinline=1&rel=0",
     active: true
   },
   {
     id: "default-2",
     name: "Cliente Satisfeita",
-    image: "/capa-depoimento-2.png",
+    image: "./capa-depoimento-2.png",
     videoUrl: "https://www.youtube.com/embed/ToTAWiHHfLo?autoplay=1&playsinline=1&rel=0",
     active: true
   },
   {
     id: "default-3",
     name: "Cliente Satisfeita",
-    image: "/capa-depoimento-3.png",
+    image: "./capa-depoimento-3.png",
     videoUrl: "https://www.youtube.com/embed/PC6IGSd83Fw?autoplay=1&playsinline=1&rel=0",
     active: true
   }

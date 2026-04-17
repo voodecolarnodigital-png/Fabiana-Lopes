@@ -87,7 +87,7 @@ export default function About() {
                 <div className="relative w-full h-full rounded-xl overflow-hidden z-10 bg-about-bg">
                   <img
                     className="w-full h-full object-cover object-top"
-                    src="/fabiana-perfil.png?v=1"
+                    src="./fabiana-perfil.png?v=1"
                     alt="Fabiana Lopes"
                     referrerPolicy="no-referrer"
                   />

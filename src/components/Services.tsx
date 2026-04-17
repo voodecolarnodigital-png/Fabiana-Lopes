@@ -9,42 +9,42 @@ const defaultServices = [
     id: "default-1",
     title: "Ombrè shadow",
     description: "Técnica exclusiva para quem busca sobrancelhas definidas e naturais. O método europeu Ombrè shadow cria um degradê suave, ideal para preencher falhas com elegância e durabilidade.",
-    image: "/sombra-ombre-novo.jpg?v=2",
+    image: "./sombra-ombre-novo.jpg?v=2",
     tags: ["Definição", "Naturalidade"]
   },
   {
     id: "default-2",
     title: "Micropigmentação palpebras",
     description: "Olhar marcante e prático 24h por dia. Realizamos desde o delineado clássico até o efeito Soft Shadow (esfumado), ideal para realçar a base dos cílios com naturalidade e elegância, sem borrar.",
-    image: "/palpebras-novo.png",
+    image: "./palpebras-novo.png",
     tags: ["Praticidade", "Elegância"]
   },
   {
     id: "default-3",
     title: "Micropigmentação labial (Lips)",
     description: "Definição de contorno e revitalização da cor dos lábios. Proporciona um aspecto saudável, com efeito \"gloss\" ou batom, corrigindo assimetrias leves.",
-    image: "/labios.png?v=1",
+    image: "./labios.png?v=1",
     tags: ["Revitalização", "Contorno"]
   },
   {
     id: "default-4",
     title: "Fio a fio Natural",
     description: "Para quem ama a naturalidade extrema. Desenhamos fios ultra finos que se misturam aos seus pelos naturais, preenchendo falhas e corrigindo o formato de forma imperceptível.",
-    image: "/fio-a-fio-novo-2.png",
+    image: "./fio-a-fio-novo-2.png",
     tags: ["Naturalidade Extrema", "Precisão"]
   },
   {
     id: "default-5",
     title: "Remoção a Laser",
     description: "Processo seguro para remover ou clarear procedimentos antigos e mal sucedidos, preparando a pele para um novo design perfeito e limpo.",
-    image: "/remocao-a-laser.png?v=1",
+    image: "./remocao-a-laser.png?v=1",
     tags: ["Segurança", "Correção"]
   },
   {
     id: "default-6",
     title: "SOS Correção",
     description: "Especialista em corrigir casos complexos que outros recusam. Com 20 anos de técnica, neutralizamos tons esverdeados, alaranjados, azulados e cinzas. Recuperamos pigmentos profundos com a segurança e a maestria de quem é referência internacional.",
-    image: "/correcao-cor.png?v=1",
+    image: "./correcao-cor.png?v=1",
     tags: ["Casos Complexos", "Referência"]
   }
 ];

@@ -23,7 +23,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
           <div className="col-span-1 md:col-span-1">
             <img 
-              src="/logo.png?v=1" 
+              src="./logo.png?v=1" 
               alt="Fabiana Lopes Logo" 
               className="h-16 w-auto object-contain mb-6"
               referrerPolicy="no-referrer"
@@ -235,10 +235,10 @@ export default function Footer() {
 
       {/* Preload SOS Images */}
       <div className="hidden">
-        <img src="/cart%C3%A3o%201%20antes.png?v=2" alt="preload" />
-        <img src="/cart%C3%A3o%201%20depois.png?v=2" alt="preload" />
-        <img src="/cart%C3%A3o%202%20antes.png?v=2" alt="preload" />
-        <img src="/cart%C3%A3o%202%20depois.png?v=2" alt="preload" />
+        <img src="./cartao-1-antes.png?v=2" alt="preload" />
+        <img src="./cartao-1-depois.png?v=2" alt="preload" />
+        <img src="./cartao-2-antes.png?v=2" alt="preload" />
+        <img src="./cartao-2-depois.png?v=2" alt="preload" />
       </div>
 
       {/* Modal Método SOS */}
@@ -284,15 +284,15 @@ export default function Footer() {
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12 items-start">
                         <BeforeAfterSlider 
-                          beforeImage="/cart%C3%A3o%201%20antes.png?v=2" 
-                          afterImage="/cart%C3%A3o%201%20depois.png?v=2" 
+                          beforeImage="./cartao-1-antes.png?v=2" 
+                          afterImage="./cartao-1-depois.png?v=2" 
                           zoom={1.1}
                           beforeObjectPosition="center 35%"
                           afterObjectPosition="center 35%"
                         />
                         <BeforeAfterSlider 
-                          beforeImage="/cart%C3%A3o%202%20antes.png?v=2" 
-                          afterImage="/cart%C3%A3o%202%20depois.png?v=2" 
+                          beforeImage="./cartao-2-antes.png?v=2" 
+                          afterImage="./cartao-2-depois.png?v=2" 
                           zoom={1.1}
                           beforeObjectPosition="center 55%"
                           afterObjectPosition="center 52%"

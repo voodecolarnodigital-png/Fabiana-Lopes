@@ -20,7 +20,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-6 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <img 
-            src="/logo.png?v=1" 
+            src="./logo.png?v=1" 
             alt="Fabiana Lopes Logo" 
             className="h-[67px] w-auto object-contain"
             referrerPolicy="no-referrer"
