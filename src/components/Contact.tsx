@@ -13,15 +13,15 @@ export default function Contact() {
               <div className="flex gap-6">
                 <MapPin className="text-primary shrink-0" size={32} />
                 <a 
-                  href="https://www.google.com/maps/place/Fabiana+Lopes+Clinic+Micropigmenta%C3%A7%C3%A3o+e+Est%C3%A9tica+%7C+Europe+%26+Brazil/@-23.5274974,-46.7969336,17z/data=!3m1!4b1!4m6!3m5!1s0x94cef7a53085d433:0x536da5cc2b9dde01!8m2!3d-23.5274974!4d-46.7969336!16s%2Fg%2F11f3y_y6_z?entry=ttu"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=R.%20%C3%81gua%20Comprida%2C%20257%20-%20Jardim%20Franca%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002339-040"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group"
                 >
                   <h5 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">Endereço</h5>
                   <p className="text-on-surface-variant leading-relaxed group-hover:text-primary transition-colors">
-                    R. Batista da Mata, 45 - Santana<br />
-                    São Paulo - SP, 02404-110
+                    R. Água Comprida, 257 - Jardim Franca<br />
+                    São Paulo - SP, 02339-040
                   </p>
                 </a>
               </div>
@@ -42,7 +42,7 @@ export default function Contact() {
                   <h5 className="font-bold text-lg mb-2">Horário de Atendimento</h5>
                   <p className="text-on-surface-variant leading-relaxed">
                     Seg-Sex: 09:00 - 19:00<br />
-                    Sáb: 09:00 - 16:00
+                    Sáb: 09:00 - 18:00
                   </p>
                 </div>
               </div>
@@ -64,13 +64,13 @@ export default function Contact() {
           </div>
           
           <a 
-            href="https://www.google.com/maps/place/Fabiana+Lopes+Clinic+Micropigmenta%C3%A7%C3%A3o+e+Est%C3%A9tica+%7C+Europe+%26+Brazil/@-23.5274974,-46.7969336,17z/data=!3m1!4b1!4m6!3m5!1s0x94cef7a53085d433:0x536da5cc2b9dde01!8m2!3d-23.5274974!4d-46.7969336!16s%2Fg%2F11f3y_y6_z?entry=ttu"
+            href="https://www.google.com/maps/search/?api=1&amp;query=R.%20%C3%81gua%20Comprida%2C%20257%20-%20Jardim%20Franca%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002339-040"
             target="_blank"
             rel="noopener noreferrer"
             className="lg:w-1/2 min-h-[500px] relative block overflow-hidden bg-surface-low group cursor-pointer"
           >
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d234120.90507959863!2d-46.7969336!3d-23.5274974!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef7a53085d433%3A0x536da5cc2b9dde01!2sFabiana%20Lopes%20Clinic%20Micropigmenta%C3%A7%C3%A3o%20e%20Est%C3%A9tica%20%7C%20Europe%20%26%20Brazil!5e0!3m2!1spt-BR!2sbr!4v1774883311651!5m2!1spt-BR!2sbr" 
+              src="https://maps.google.com/maps?q=R.%20%C3%81gua%20Comprida%2C%20257%20-%20Jardim%20Franca%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002339-040&amp;z=16&amp;output=embed" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 

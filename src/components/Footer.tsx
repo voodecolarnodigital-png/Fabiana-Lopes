@@ -23,8 +23,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
           <div className="col-span-1 md:col-span-1">
             <img 
-              src="./logo.png?v=1" 
-              alt="Fabiana Lopes Logo" 
+              src="./logo.png?v=20261119" 
+              alt="Fabiana Lopes Clinic" 
               className="h-16 w-auto object-contain mb-6"
               referrerPolicy="no-referrer"
             />
@@ -79,15 +79,15 @@ export default function Footer() {
             <h6 className="text-on-surface font-bold text-xs uppercase tracking-widest mb-8">Onde nos Encontrar</h6>
             <div className="space-y-4 text-on-surface-variant text-sm">
               <a 
-                href="https://www.google.com/maps/place/Fabiana+Lopes+Clinic+Micropigmenta%C3%A7%C3%A3o+e+Est%C3%A9tica+%7C+Europe+%26+Brazil/@-23.5274974,-46.7969336,17z/data=!3m1!4b1!4m6!3m5!1s0x94cef7a53085d433:0x536da5cc2b9dde01!8m2!3d-23.5274974!4d-46.7969336!16s%2Fg%2F11f3y_y6_z?entry=ttu"
+                href="https://www.google.com/maps/search/?api=1&amp;query=R.%20%C3%81gua%20Comprida%2C%20257%20-%20Jardim%20Franca%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002339-040"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block"
               >
                 <span className="font-bold block text-on-surface mb-1 group-hover:text-primary transition-colors">Endereço:</span>
                 <p className="group-hover:text-primary transition-colors">
-                  R. Batista da Mata, 45 - Santana<br />
-                  São Paulo - SP, 02404-110
+                  R. Água Comprida, 257 - Jardim Franca<br />
+                  São Paulo - SP, 02339-040
                 </p>
               </a>
               <p>
