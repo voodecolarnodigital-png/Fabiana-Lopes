@@ -1,6 +1,6 @@
-# Fabiana Lopes - Spa Brow & Face
+# Fabiana Lopes - Clinic
 
-Este é o código-fonte completo do projeto "Spa Brow & Face", pronto para ser publicado no GitHub e executado no seu computador. Ele foi construído com as melhores e mais modernas tecnologias do mercado frontend: **React**, **Vite** e **Tailwind CSS**, além de integrar o **Firebase** para gerenciamento de dados dinâmicos.
+Este é o código-fonte completo do projeto "Fabiana Lopes Clinic", pronto para ser publicado no GitHub e executado no seu computador. Ele foi construído com as melhores e mais modernas tecnologias do mercado frontend: **React**, **Vite** e **Tailwind CSS**, além de integrar o **Firebase** para gerenciamento de dados dinâmicos.
 
 Todas as imagens, vídeos embebedados e estilos foram mantidos exatamente como na versão original.
 
@@ -39,7 +39,7 @@ git init
 git add .
 
 # Cria o primeiro commit
-git commit -m "Meu primeiro commit - Projeto Spa Face & Brow"
+git commit -m "Meu primeiro commit - Projeto Fabiana Lopes Clinic"
 
 # Mude a branch para main
 git branch -M main
