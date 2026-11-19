@@ -136,7 +136,7 @@ export default function Footer() {
 
         <div className="pt-10 border-t border-outline-variant/10 text-center">
           <p className="text-on-surface-variant text-xs">
-            © 2024 Fabiana Lopes Spa Brow & Face. Todos os direitos reservados.
+            © 2024 Fabiana Lopes Academy. Todos os direitos reservados.
           </p>
         </div>
       </div>
