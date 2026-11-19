@@ -58,7 +58,7 @@ export default function About() {
                     Atendimentos no Brasil Iniciados (Vagas Limitadas)
                   </h4>
                   <p className="text-on-surface-variant/80 text-sm leading-relaxed font-sans max-w-xl">
-                    Recém-chegada de uma temporada na Suíça. Aproveite a oportunidade única de agendar sua avaliação com a Fabiana agora em abril.
+                    Recém-chegada de uma temporada na Suíça. Aproveite a oportunidade única de agendar sua avaliação com a Fabiana.
                   </p>
                 </div>
               </div>
